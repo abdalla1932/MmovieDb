@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Montserrat&display=swap');
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,0.6);
+$fontColor:white;
+$borderColor:#a8a8a83d;
+$secondFontColor:#949cb0;
+
+
+body
+{
+    background-color: $bgColor;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: $fontColor;
+}
+
+.brdr
+{
+    border: 1px solid $borderColor;
+}
+
+
+nav
+{
+    color: white !important;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);;
+}
+
+.demo{
+    position: absolute;
+    left: 1.5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px;
+    height: 750px;
+   
+}
+
+.demo span{
+    background-color: #09c;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    font-weight: 700;
+    /* line-height: 20px; */
+    width: 85px;
+    display: block;
+    text-align: center;
+    transform:rotate(-45deg);
+    top: 17px;
+    left: -16px;
+    color: white;
+}
+
+.demo span::before{
+    border-right-color: #09c;
+    border-top-color: rgb(90, 11, 35);
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #09c;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #09c;
+}
+.demo span::after{
+    border-right-color: #09c;
+    border-top-color: #09c;
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #09c;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #09c;
+}
+
+
+input
+{
+    background-color: transparent !important;
+    color: white !important;
+    border-color: $borderColor !important;
+}
+
+label
+{
+    margin-bottom: 5px;
+}
+
+.btn
+{
+    color: white;
+    float: right;
+    transition: 0.5s;
+}
+
+.btn:hover
+{
+    font-weight: bold;
+    color: $bgColor ;
+}
+
+.regis
+{
+    font-weight: bold;
+    
+}
+
+.overview
+{
+    line-height: 30px;
+}
+
+.headTitle
+{
+    color: #09c;
+    font-weight: bold;
+}
+
+.genres
+{
+    border: #09c 2px solid;
+    padding: 5px;
+}
+
+.swiper-button-next{
+    background-color: rgb(214, 209, 209) !important;
+    padding: 25px;
+    right: 40px;
+}
+
+.swiper-button-prev{
+    background-color: rgb(214, 209, 209) !important;
+    padding: 25px;
+    left: 40px;
+}

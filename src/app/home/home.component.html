@@ -1,0 +1,59 @@
+<div class="container py-5 ">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <div class="brdr w-25 my-3"></div>
+                <h2>Trending</h2>
+            <h2>Movies</h2>
+            <h2>to Watch</h2>
+            <p class="py-2 text-secondary">most watched movies by day</p>
+            <div class="brdr w-100 my-3"></div>
+            </div>
+        </div>
+        <div  *ngFor="let movie of TrendMovies" class="col-md-2 py-2 text-center position-relative">
+           <img [routerLink]="['/details', movie.id]" [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+           <h5>{{movie.title}}{{movie.name}}</h5>
+           <span class="demo">
+            <span>{{movie.vote_average}}</span>
+        </span>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <div class="brdr w-25 my-3"></div>
+                <h2>Trending</h2>
+            <h2>Tv</h2>
+            <h2>to Watch</h2>
+            <p class="py-2 text-secondary">most watched tv by day</p>
+            <div class="brdr w-100 my-3"></div>
+            </div>
+        </div>
+        <div *ngFor="let tv of TrendTv" class="col-md-2 py-2 text-center position-relative">
+           <img [routerLink]="['/details', tv.id]" [src]="imgPrefix+tv.poster_path" class="w-100" alt="">
+           <h5>{{tv.title}}{{tv.name}}</h5>
+           <span class="demo">
+            <span>{{tv.vote_average}}</span>
+        </span>
+        </div>
+
+    </div>
+</div>
+
+
+<swiper class="container"
+    [slidesPerView]="4"
+    [spaceBetween]="5"
+    [slidesPerGroup]="3"
+    [loop]="true"
+    [loopFillGroupWithBlank]="true"
+    [pagination]="{clickable: true}"[navigation]="true"class="mySwiper">
+    <ng-template swiperSlide *ngFor="let movie of TrendMovies" class=" w-25 py-2 text-center position-relative container mb-5">
+    <div class="col-md-10">
+        <img [routerLink]="['/details', movie.id]" [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+        <h5>{{movie.title}}{{movie.name}}</h5>
+        <span class="demo1">
+         <span>{{movie.vote_average}}</span>
+     </span>
+    </div>
+    </ng-template>
+  </swiper>

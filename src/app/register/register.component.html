@@ -1,0 +1,44 @@
+<div class="container my-5">
+
+    <h2 class="regis text-center py-2">Register</h2>
+
+    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+    <form  method="post" [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+
+        <label>First Name:</label>
+        <input formControlName="first_name" class="form-control mb-2" type="text">
+        <p class="text-danger my-2" *ngIf= 'registerForm.controls.first_name.invalid && registerForm.controls.first_name.touched'>
+            first name is required and must have 3 to 10 letters
+        </p>
+
+        <label>Last Name:</label>
+        <input formControlName="last_name" class="form-control mb-2" type="text">
+        <p class="text-danger my-2" *ngIf= 'registerForm.controls.last_name.invalid && registerForm.controls.last_name.touched'>
+            last name is required and must have 3 to 10 letters
+        </p>
+
+        <label>Age:</label>
+        <input formControlName="age" class="form-control mb-2" type="number">
+        <p class="text-danger my-2" *ngIf= 'registerForm.controls.age.invalid && registerForm.controls.age.touched'>
+            age is required and must be 12 at least
+        </p>
+
+        <label>Email:</label>
+        <input formControlName="email" class="form-control mb-2" type="email">
+        <p class="text-danger my-2" *ngIf= 'registerForm.controls.email.invalid && registerForm.controls.email.touched'>
+            email is required
+        </p>
+
+        <label>Password</label>
+        <input formControlName="password" class="form-control mb-2" type="password">
+        <p class="text-danger my-2" *ngIf= 'registerForm.controls.password.invalid && registerForm.controls.password.touched'>
+            password is required and must be at least 4
+        </p>
+
+        <button [disabled]="registerForm.invalid" type="submit" class="btn btn-info ">Submit</button>
+    
+    </form>
+    
+
+</div>

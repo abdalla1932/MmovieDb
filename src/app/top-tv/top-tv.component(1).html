@@ -1,0 +1,11 @@
+<div class="container py-5">
+    <div class="row">
+        <div *ngFor="let tv of tvtop " class="col-md-3 py-2 position-relative">
+            <img [routerLink]="['/details', tv.id]" [src]="imgPrefix+tv.poster_path" class="w-100" alt="">
+            <h5>{{tv.name}}</h5>
+            <span class="demo">
+                <span>{{tv.vote_average}}</span>
+            </span>
+        </div>
+    </div>
+</div>

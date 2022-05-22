@@ -1,0 +1,90 @@
+
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgb(203, 10, 10);
+  
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.demo1{
+    position: absolute;
+    left: 1.5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px;
+    height: 750px;
+}
+.demo1 span{
+    background-color: #09c;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    font-weight: 700;
+    /* line-height: 20px; */
+    width: 85px;
+    display: block;
+    text-align: center;
+    transform:rotate(-45deg);
+    top: 17px;
+    left: -16px;
+    color: white;
+}
+.demo1 span::before{
+    border-right-color: rgb(220, 246, 255);
+    border-top-color: rgb(90, 11, 35);
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #09c;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #09c;
+}
+.demo1 span::after{
+    border-right-color: #09c;
+    border-top-color: #09c;
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -1;
+    border-right: 2px solid #09c;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid #09c;
+}
+
+.swiper-button-next{
+    background-color: firebrick !important;
+}

@@ -1,0 +1,27 @@
+<div class="container my-5">
+
+    <h2 class="regis text-center py-2">Login</h2>
+
+    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+    <form  method="post" [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm)">
+          
+
+        <label>Email:</label>
+        <input formControlName="email" class="form-control mb-2" type="email">
+        <p class="text-danger my-2" *ngIf= 'loginForm.controls.email.invalid && loginForm.controls.email.touched'>
+            email is required
+        </p>
+
+        <label>Password</label>
+        <input formControlName="password" class="form-control mb-2" type="password">
+        <p class="text-danger my-2" *ngIf= 'loginForm.controls.password.invalid && loginForm.controls.password.touched'>
+            password is required
+        </p>
+
+        <button [disabled]="loginForm.invalid" type="submit" class="btn btn-info ">Submit</button>
+    
+    </form>
+    
+
+</div>

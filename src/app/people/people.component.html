@@ -1,0 +1,10 @@
+<div class="container py-5">
+    <div class="row">
+        <div *ngFor="let one of people " class="col-md-3 py-2 text-center">
+            <img [routerLink]="['/peopledet', one.id]" [src]="imgPrefix+one.profile_path" class="w-100" alt="">
+            <h5 class="mt-2">{{one.name}}</h5>
+        </div>
+    </div>
+</div>
+
+

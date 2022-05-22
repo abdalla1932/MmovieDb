@@ -1,0 +1,23 @@
+
+<div class="container py-5">
+
+    <input type="text" [(ngModel)]='term' class="form-control bg-transparent w-50 m-auto my-5">
+    <div class="row">
+        <div *ngFor="let movie of nowMovies|search:term " class="col-md-3 py-2 text-center position-relative">
+            <img [routerLink]="['/details', movie.id]" [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+            <h5 class="mt-2">{{movie.title}}</h5>
+            <span class="demo">
+                <span>{{movie.vote_average}}</span>
+            </span>
+        </div>
+
+        <div *ngFor="let movie of nowMovies2 " class="col-md-3 py-2 text-center position-relative">
+            <img [routerLink]="['/details', movie.id]" [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+            <h5 class="mt-2">{{movie.title}}</h5>
+            <span class="demo">
+                <span>{{movie.vote_average}}</span>
+            </span>
+        </div>
+    </div>
+</div>
+
